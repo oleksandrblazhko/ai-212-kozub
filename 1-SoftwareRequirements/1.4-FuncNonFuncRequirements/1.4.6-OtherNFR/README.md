@@ -3,6 +3,6 @@
 |:-----:|:-----:|:-----|:-----|
 |FR1.2|NFR1.3|Time Performance|5 секунд|
 |FR1.2|NFR1.3|Network|Наявність WI-FI чи іншого інтернет зв'язку|
-|FR1.4|NFR1.5|Human Factors Requirements|Потрібна дія з боку людини|
-|FR2.2|NFR2.3|Human Factors Requirements|Потрібна дія з боку людини|
-|FR2.2|NFR2.3|Human Factors Requirements|Потрібна дія з боку людини|
+|FR1.4|NFR1.5|Human Factors Requirements|Дія з боку людини|
+|FR2.2|NFR2.3|Human Factors Requirements|Дія з боку людини|
+|FR2.2|NFR2.3|Human Factors Requirements|Дія з боку людини|
