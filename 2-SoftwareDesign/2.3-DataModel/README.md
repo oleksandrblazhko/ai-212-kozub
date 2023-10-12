@@ -1,3 +1,3 @@
 ### Схема моделі даних
 
-![](./JSONDataExample.json) 
+![img](/2-SoftwareDesign/2.3-DataModel/JSONDataExample.jpeg)
