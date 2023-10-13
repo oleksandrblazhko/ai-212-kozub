@@ -1,0 +1,43 @@
+{
+  "Users": {
+    "1": {
+      "login": "username",
+      "password": "********",
+      "email": "name@gmail.com"
+    }
+  },
+  "Request for technical questions": {
+    "1": {
+      "purpose": "Запит на технічні питання",
+      "date": "10.10.2023"
+    }
+  },
+  "Office Employee": {
+    "1": {
+      "name": "Катерина"
+    }
+  },
+  "Answer": {
+    "1": {
+      "Answer text": "Доброго дня , так осі ваші дані про цей освітлювач",
+      "date": "11.10.2023"
+    }
+  },
+  "Request for product availability": {
+    "1": {
+      "purpose": "Запит на наявність товару",
+      "date": "10.10.2023"
+    }
+  },
+  "Worker": {
+    "1": {
+      "name": "Артем"
+    }
+  },
+  "Answer ": {
+    "2": {
+      "Answer text": "Доброго дня , так товар є в наявності",
+      "date": "11.10.2023"
+    }
+  }
+}

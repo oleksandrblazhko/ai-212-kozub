@@ -1,0 +1,158 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$id": "https://example.com/employee.schema.json",
+  "title": "Record of employee",
+  "description": "This document records the details of an employee",
+  "type": "object",
+  "properties": {
+    "Users": {
+      "type": "object",
+      "properties": {
+        "1": {
+          "type": "object",
+          "properties": {
+            "login": {
+              "type": "string",
+              "description": "User's login"
+            },
+            "password": {
+              "type": "string",
+              "description": "User's password"
+            },
+            "email": {
+              "type": "string",
+              "description": "User's email address"
+            }
+          },
+          "required": [
+            "login",
+            "password",
+            "email"
+          ]
+        }
+      }
+    },
+    "Request for technical questions": {
+      "type": "object",
+      "properties": {
+        "1": {
+          "type": "object",
+          "properties": {
+            "purpose": {
+              "type": "string",
+              "description": "Purpose of the request"
+            },
+            "date": {
+              "type": "string",
+              "description": "Date of the request"
+            }
+          },
+          "required": [
+            "purpose",
+            "date"
+          ]
+        }
+      }
+    },
+    "Office Employee": {
+      "type": "object",
+      "properties": {
+        "1": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "Name of the office employee"
+            }
+          },
+          "required": [
+            "name"
+          ]
+        }
+      }
+    },
+    "Answer": {
+      "type": "object",
+      "properties": {
+        "1": {
+          "type": "object",
+          "properties": {
+            "Answer text": {
+              "type": "string",
+              "description": "Text of the answer"
+            },
+            "date": {
+              "type": "string",
+              "description": "Date of the answer"
+            }
+          },
+          "required": [
+            "Answer text",
+            "date"
+          ]
+        }
+      }
+    },
+    "Request for product availability": {
+      "type": "object",
+      "properties": {
+        "1": {
+          "type": "object",
+          "properties": {
+            "purpose": {
+              "type": "string",
+              "description": "Purpose of the request"
+            },
+            "date": {
+              "type": "string",
+              "description": "Date of the request"
+            }
+          },
+          "required": [
+            "purpose",
+            "date"
+          ]
+        }
+      }
+    },
+    "Worker": {
+      "type": "object",
+      "properties": {
+        "1": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "Name of the office employee"
+            }
+          },
+          "required": [
+            "name"
+          ]
+        }
+      }
+    },
+    "Answer": {
+      "type": "object",
+      "properties": {
+        "1": {
+          "type": "object",
+          "properties": {
+            "Answer text": {
+              "type": "string",
+              "description": "Text of the answer"
+            },
+            "date": {
+              "type": "string",
+              "description": "Date of the answer"
+            }
+          },
+          "required": [
+            "Answer text",
+            "date"
+          ]
+        }
+      }
+    }
+  }
+}
