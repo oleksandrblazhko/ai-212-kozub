@@ -44,17 +44,15 @@
         }
       }
     },
-    "required": [
-        "user id"
-      ]
-    },
+    "required": ["Users"]
+  },
     "Responses to Requests": {
       "type": "object",
       "properties": {
-        "response id": {
+        "response_id": {
           "type": "object",
           "properties": {
-            "response text": {
+            "response_text": {
               "description": "Текст відповіді на запит",
               "type": "string",
               "maxLength": 1000
@@ -62,57 +60,53 @@
             "date": {
               "description": "Дата відповіді на запит",
               "type": "string",
-              "format":"date" 
+              "format": "date"
             },
-            "request id": {
+            "request_id": {
               "description": "reference",
               "type": "string"
             }
           },
-          "required": [
-            "response text",
-            "date",
-            "request id"
-          ]
+          "required": ["response_text", "date", "request_id"]
         }
       },
-      "required": ["response id"
-      ]
+      "required": ["response_id"]
     },
-    "Office worker":{
-       "type": "object",
+    "Office worker": {
+      "type": "object",
       "properties": {
-        "officeworker id": {
+        "officeworker_id": {
           "type": "object",
           "properties": {
             "name": {
               "description": "Ім'я офісний працівник",
               "type": "string",
               "maxLength": 30
-            },
-             "required": ["name"]
-          }
-        },
-        "required": ["officeworkert id"
-        ]
+            }
+          },
+          "required": ["name"]
+        }
+      },
+      "required": ["officeworker_id"]
     },
-     "Worker":{
-       "type": "object",
+    "Worker": {
+      "type": "object",
       "properties": {
-        "worker id": {
+        "worker_id": {
           "type": "object",
           "properties": {
             "name": {
               "description": "Ім'я офісний працівник",
               "type": "string",
               "maxLength": 30
-            },
-             "required": ["name"]
-          }
-        },
-        "required": ["workert id"
-        ]
-      }
+            }
+          },
+          "required": ["name"]
+        }
+      },
+      "required": ["worker_id"]
+    }
   }
 }
+
                 
