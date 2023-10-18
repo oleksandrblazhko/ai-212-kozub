@@ -1,2 +1,2 @@
 ### UML-діаграма програмних класів
-![](./UML-ProgramClasses_revised.jpg)
+![](./UML-ProgramClasses_revised.png)
