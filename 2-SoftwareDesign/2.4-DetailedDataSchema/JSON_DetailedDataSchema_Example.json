@@ -1,63 +1,118 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Record of User",
+  "description": "This document records the details of a user",
   "type": "object",
   "properties": {
-    "Користувач": {
+    "Users": {
       "type": "object",
       "properties": {
-        "ID": { "type": "integer" },
-        "Ім'я": { "type": "string" },
-        "Вік": { "type": "integer" },
-        "Країна": { "type": "string" },
-        "Адреса": { "type": "string" }
-      },
-      "required": ["ID", "Ім'я", "Вік", "Країна", "Адреса"]
+        "user_id": {
+          "type": "object",
+          "properties": {
+            "age": {
+              "description": "Вік користувача",
+              "type": "integer",
+              "minimum": 8
+            },
+            "Country": {
+              "description": "Країна",
+              "type": "string",
+              "maxLength": 30
+            },
+            "address": {
+              "description": "Адреса",
+              "type": "string",
+              "maxLength": 30
+            },
+            "login": {
+              "description": "Логін користувача",
+              "type": "string",
+              "pattern": "^[A-Za-z0-9_-]{3,20}$"
+            },
+            "password": {
+              "description": "Пароль користувача",
+              "type": "string",
+              "maxLength": 30
+            },
+            "email": {
+              "description": "Ел. пошта користувача",
+              "type": "string",
+              "pattern": "^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}$"
+            }
+          },
+          "required": ["age", "Country", "address", "login", "password", "email"]
+        }
+      }
     },
-    "Запит на технічні питання": {
-      "type": "object",
-      "properties": {
-        "ID": { "type": "integer" },
-        "Ціль": { "type": "string" },
-        "Дата": { "type": "string", "format": "date" },
-        "Користувач": { "$ref": "#/properties/Користувач" }
-      },
-      "required": ["ID", "Ціль", "Дата", "Користувач"]
+    "required": [
+        "user id"
+      ]
     },
-    "Запит на наявність товару": {
+    "Responses to Requests": {
       "type": "object",
       "properties": {
-        "ID": { "type": "integer" },
-        "Ціль": { "type": "string" },
-        "Дата": { "type": "string", "format": "date" },
-        "Користувач": { "$ref": "#/properties/Користувач" }
+        "response id": {
+          "type": "object",
+          "properties": {
+            "response text": {
+              "description": "Текст відповіді на запит",
+              "type": "string",
+              "maxLength": 1000
+            },
+            "date": {
+              "description": "Дата відповіді на запит",
+              "type": "string",
+              "format":"date" 
+            },
+            "request id": {
+              "description": "reference",
+              "type": "string"
+            }
+          },
+          "required": [
+            "response text",
+            "date",
+            "request id"
+          ]
+        }
       },
-      "required": ["ID", "Ціль", "Дата", "Користувач"]
+      "required": ["response id"
+      ]
     },
-    "Офісний працівник": {
-      "type": "object",
+    "Office worker":{
+       "type": "object",
       "properties": {
-        "ID": { "type": "integer" },
-        "Ім'я": { "type": "string" }
-      },
-      "required": ["ID", "Ім'я"]
+        "officeworker id": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "description": "Ім'я офісний працівник",
+              "type": "string",
+              "maxLength": 30
+            },
+             "required": ["name"]
+          }
+        },
+        "required": ["officeworkert id"
+        ]
     },
-    "Робітник": {
-      "type": "object",
+     "Worker":{
+       "type": "object",
       "properties": {
-        "ID": { "type": "integer" },
-        "Ім'я": { "type": "string" }
-      },
-      "required": ["ID", "Ім'я"]
-    },
-    "Відповідь": {
-      "type": "object",
-      "properties": {
-        "ID": { "type": "integer" },
-        "Ціль": { "type": "string" },
-        "Дата": { "type": "string", "format": "date" },
-        "Запит": { "$ref": "#/properties/Запит на технічні питання" }
-      },
-      "required": ["ID", "Ціль", "Дата", "Запит"]
-    }
+        "worker id": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "description": "Ім'я офісний працівник",
+              "type": "string",
+              "maxLength": 30
+            },
+             "required": ["name"]
+          }
+        },
+        "required": ["workert id"
+        ]
+      }
   }
 }
+                
