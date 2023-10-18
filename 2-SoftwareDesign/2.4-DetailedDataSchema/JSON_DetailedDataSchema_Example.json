@@ -1,0 +1,63 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "Користувач": {
+      "type": "object",
+      "properties": {
+        "ID": { "type": "integer" },
+        "Ім'я": { "type": "string" },
+        "Вік": { "type": "integer" },
+        "Країна": { "type": "string" },
+        "Адреса": { "type": "string" }
+      },
+      "required": ["ID", "Ім'я", "Вік", "Країна", "Адреса"]
+    },
+    "Запит на технічні питання": {
+      "type": "object",
+      "properties": {
+        "ID": { "type": "integer" },
+        "Ціль": { "type": "string" },
+        "Дата": { "type": "string", "format": "date" },
+        "Користувач": { "$ref": "#/properties/Користувач" }
+      },
+      "required": ["ID", "Ціль", "Дата", "Користувач"]
+    },
+    "Запит на наявність товару": {
+      "type": "object",
+      "properties": {
+        "ID": { "type": "integer" },
+        "Ціль": { "type": "string" },
+        "Дата": { "type": "string", "format": "date" },
+        "Користувач": { "$ref": "#/properties/Користувач" }
+      },
+      "required": ["ID", "Ціль", "Дата", "Користувач"]
+    },
+    "Офісний працівник": {
+      "type": "object",
+      "properties": {
+        "ID": { "type": "integer" },
+        "Ім'я": { "type": "string" }
+      },
+      "required": ["ID", "Ім'я"]
+    },
+    "Робітник": {
+      "type": "object",
+      "properties": {
+        "ID": { "type": "integer" },
+        "Ім'я": { "type": "string" }
+      },
+      "required": ["ID", "Ім'я"]
+    },
+    "Відповідь": {
+      "type": "object",
+      "properties": {
+        "ID": { "type": "integer" },
+        "Ціль": { "type": "string" },
+        "Дата": { "type": "string", "format": "date" },
+        "Запит": { "$ref": "#/properties/Запит на технічні питання" }
+      },
+      "required": ["ID", "Ціль", "Дата", "Запит"]
+    }
+  }
+}
