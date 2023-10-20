@@ -1,0 +1,112 @@
+{
+  "title": "Record of User",
+  "description": "This document records the details of a user",
+  "type": "object",
+  "properties": {
+    "Users": {
+      "type": "object",
+      "properties": {
+        "user_id": {
+          "type": "object",
+          "properties": {
+            "age": {
+              "description": "Вік користувача",
+              "type": "integer",
+              "minimum": 8
+            },
+            "Country": {
+              "description": "Країна",
+              "type": "string",
+              "maxLength": 30
+            },
+            "address": {
+              "description": "Адреса",
+              "type": "string",
+              "maxLength": 30
+            },
+            "login": {
+              "description": "Логін користувача",
+              "type": "string",
+              "pattern": "^[A-Za-z0-9_-]{3,20}$"
+            },
+            "password": {
+              "description": "Пароль користувача",
+              "type": "string",
+              "maxLength": 30
+            },
+            "email": {
+              "description": "Ел. пошта користувача",
+              "type": "string",
+              "pattern": "^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}$"
+            }
+          },
+          "required": ["age", "Country", "address", "login", "password", "email"]
+        }
+      }
+    },
+    "required": ["Users"]
+  },
+    "Responses to Requests": {
+      "type": "object",
+      "properties": {
+        "response_id": {
+          "type": "object",
+          "properties": {
+            "response_text": {
+              "description": "Текст відповіді на запит",
+              "type": "string",
+              "maxLength": 1000
+            },
+            "date": {
+              "description": "Дата відповіді на запит",
+              "type": "string",
+              "format": "date"
+            },
+            "request_id": {
+              "description": "reference",
+              "type": "string"
+            }
+          },
+          "required": ["response_text", "date", "request_id"]
+        }
+      },
+      "required": ["response_id"]
+    },
+    "Office worker": {
+      "type": "object",
+      "properties": {
+        "officeworker_id": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "description": "Ім'я офісний працівник",
+              "type": "string",
+              "maxLength": 30
+            }
+          },
+          "required": ["name"]
+        }
+      },
+      "required": ["officeworker_id"]
+    },
+    "Worker": {
+      "type": "object",
+      "properties": {
+        "worker_id": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "description": "Ім'я офісний працівник",
+              "type": "string",
+              "maxLength": 30
+            }
+          },
+          "required": ["name"]
+        }
+      },
+      "required": ["worker_id"]
+    }
+  }
+
+
+                
