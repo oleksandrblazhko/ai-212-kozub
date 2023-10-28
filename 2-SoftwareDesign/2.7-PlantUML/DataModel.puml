@@ -1,0 +1,36 @@
+@startjson
+
+title JSON Data
+{
+  "User": {
+    "id": "1",
+    "login": "username",
+    "password": "********",
+    "email": "12345@stud.op.edu.ua",
+    "Requests": {
+      "id": "1",
+      "purpose": "Запит на наявність товару",
+      "date": "20.10.2023"
+    },
+    "Робітник": {
+      "id": "1",
+      "name": "Anya"
+    },
+    "Responses to Presence novar": {
+      "id": "1",
+      "response text": "Доброго дня,  ваші замовлення доступні",
+      "date": "21.10.2023"
+    },
+    "List of goods": [
+      {
+        "id": "1",
+        "name": "STLS Par S-54005 RGBW"
+      },
+      {
+        "id": "2",
+        "name": "STLS Led StrobePar 981"
+      }
+    ]
+  }
+}
+@endjson
