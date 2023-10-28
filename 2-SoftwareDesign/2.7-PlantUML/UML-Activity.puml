@@ -1,0 +1,19 @@
+@startuml
+title Activity Diagram 
+
+start
+:The user sends a request about the availability of the product;
+if (Successfully?) then (Yes)
+  :The employee responds to the request;
+  :Appoints a consultation time;
+  if (Successfully?) then (Yes)
+    :The user receives a response;
+  else (No)
+    :Error message;
+  endif
+else (No)
+  :Waiting for a reply;
+endif
+stop
+
+@enduml
