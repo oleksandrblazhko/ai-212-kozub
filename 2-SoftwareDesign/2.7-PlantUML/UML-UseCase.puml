@@ -1,0 +1,18 @@
+@startuml
+
+title Empty Diagram
+@startuml
+
+actor Користувач as User
+actor Роботник as Worker
+
+User --> (Авторизується)
+User --> (Отримує список товарів)
+User --> (Вибирає товари)
+User --> (Створює замовлення)
+
+Worker --> (Приймає замовлення)
+Worker --> (Повідомляє про створення замовлення)
+
+
+@enduml
