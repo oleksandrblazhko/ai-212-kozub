@@ -1,0 +1,23 @@
+@startuml
+
+left to right direction
+
+skinparam componentStyle uml1
+
+!define SmartPhone <<Smartphone>>
+!define AndroidOC "<<OC Android>>"
+
+node SmartPhone as smartphone {
+  node AndroidOC {
+    component "*.apk(Android Studio)"
+  }
+}
+
+interface TouchScreen
+
+
+
+TouchScreen - smartphone
+
+
+@enduml
