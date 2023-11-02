@@ -1,0 +1,25 @@
+@startuml
+
+hide circle
+title UML Concept Classes 
+
+Class User {
+    login
+    password
+    email
+}
+
+Class Productavailability {
+    purpose
+    date
+}
+
+Class Worker {
+    name
+}
+
+User "1" --> "*" Productavailability : send
+
+Worker "1" --> "*" Productavailability : review
+
+@enduml
