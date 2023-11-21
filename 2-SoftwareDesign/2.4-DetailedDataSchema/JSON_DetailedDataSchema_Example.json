@@ -15,9 +15,9 @@
               "minimum": 8
             },
             "Country": {
-              "description": "Країна",
-              "type": "string",
-              "maxLength": 30
+            "description": "Країна",
+            "type": "string",
+             "pattern": "^[A-Za-z]{2,30}$"
             },
             "address": {
               "description": "Адреса",
